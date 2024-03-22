@@ -87,10 +87,9 @@ if type(getinfo) ~= 'function' then
     end
 end
 
-local UI = urlLoad("https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/Library.lua")
-local themeManager = urlLoad("https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/addons/ThemeManager.lua")
+local UI = urlLoad("https://raw.githubusercontent.com/aesyncio/autoplayer/main/library.lua")
+local themeManager = urlLoad("https://raw.githubusercontent.com/aesyncio/autoplayer/main/ThemeManager.lua")
 
-local metadata = urlLoad("https://raw.githubusercontent.com/wally-rblx/funky-friday-autoplay/main/metadata.lua")
 local httpService = game:GetService('HttpService')
 
 local framework, scrollHandler, network
@@ -643,7 +642,7 @@ local SaveManager = {} do
 end
 
 local Window = UI:CreateWindow({
-    Title = string.format('funky friday autoplayer - version %s | updated: %s', metadata.version, metadata.updated),
+    Title = string.format('funky friday autoplayer - version idk | updated: idk'),
     AutoShow = true,
     
     Center = true,
