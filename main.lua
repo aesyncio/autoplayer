@@ -7,7 +7,7 @@ local function fail(r) return client:Kick(r) end
 
 -- gracefully handle errors when loading external scripts
 -- added a cache to make hot reloading a bit faster
-local usedCache = shared.__urlcache and next(shared.__urlcache) ~= nil
+--local usedCache = shared.__urlcache and next(shared.__urlcache) ~= nil
 
 --shared.__urlcache = shared.__urlcache or {}
 local function urlLoad(url)
