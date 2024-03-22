@@ -9,15 +9,15 @@ local function fail(r) return client:Kick(r) end
 -- added a cache to make hot reloading a bit faster
 local usedCache = shared.__urlcache and next(shared.__urlcache) ~= nil
 
-shared.__urlcache = shared.__urlcache or {}
+--shared.__urlcache = shared.__urlcache or {}
 local function urlLoad(url)
     local success, result
 
-    if shared.__urlcache[url] then
+    --[[if shared.__urlcache[url] then
         success, result = true, shared.__urlcache[url]
-    else
+    else]]--
         success, result = pcall(game.HttpGet, game, url)
-    end
+    --end
 
     if (not success) then
         return fail(string.format('Failed to GET url %q for reason: %q', url, tostring(result)))
@@ -33,7 +33,7 @@ local function urlLoad(url)
         return fail(string.format('Failed to initialize url %q for reason: %q', url, tostring(results[2])))
     end
 
-    shared.__urlcache[url] = result
+    --shared.__urlcache[url] = result
     return unpack(results, 2)
 end
 
