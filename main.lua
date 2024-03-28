@@ -108,13 +108,13 @@ while true do
         if network and framework then break end
     end
 
-    for _, module in next, getloadedmodules() do
+ --[[   for _, module in next, getloadedmodules() do
         if module.Name == 'ScrollHandler' then
             scrollHandler = module;
             break;
         end
     end 
-
+]]--
     if (type(framework) == 'table' and typeof(scrollHandler) == 'Instance' and type(network) == 'table') then
         break
     end
